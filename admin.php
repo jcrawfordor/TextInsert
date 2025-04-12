@@ -210,8 +210,9 @@ JSFN;
      * output appropriate html
      */
     function html() {
-     $this->macros_data = $this->get_macros();
-     $this->js();
+      global $ID;
+      $this->macros_data = $this->get_macros();
+      $this->js();
       if($this->output) {
         ptln('<pre>' . $this->output . '</pre>');
       }
